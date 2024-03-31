@@ -1,0 +1,20 @@
+extends ../layouts/layout.pug
+block css
+  link(rel="stylesheet", href="../../style/form.css")
+block content
+  .container
+    .row
+      .col-lg-12.col-xl-10
+        .row
+          form#login
+            label(for='pseudo') Pseudonyme
+            input#pseudo(type="text", name="pseudo")
+            label(for='password') Mot de passe
+            input#password(type="password", name="password")
+            button#submit(type="submit").buttonBlueGeneral Se connecter
+        .row
+          div#notification
+            p#notificationMessage
+      .col-lg-12.col-xl-2
+        .row
+  script(type='module', src='../script/login.js')

@@ -1,0 +1,27 @@
+header
+  nav
+    .navSection
+      a.nav-icon(href='/' aria-label="Visiter la page d'accueil")
+        div
+          span.name
+            strong Aurore Sifflet
+          span.title D&eacute;veloppeuse Full&nbsp;Stack
+      .main-navlinks
+        button.hamburger(type='button' aria-label='Toggle navigation' aria-expanded='false')
+          span
+          span
+          span
+      .navlinks-container
+        ul#menu-navigation
+          li.active
+            a(href='/' aria-current='page') JEU MULTIJOUEUR
+          li
+            a(href='/jeu-monojoueur') JEU MONOJOUEUR
+          li
+            a(href='/contact') CV | CONTACT
+          li
+            a(href='/inscription') INSCRIPTION
+          li
+            a(href='/connexion') CONNEXION
+          li#logoutBtn
+            a(href='/deconnexion') DÉCONNEXION

@@ -1,0 +1,68 @@
+extends ../layouts/layout.pug
+block css
+  link(rel="stylesheet", href="../../style/multiplayer.css")
+block content
+  .container
+    .row
+      div.cursor-text#cursorText
+      div#gamePlace.col-md-12.col-lg-9
+        .row
+          p#chronometre 01:00:00
+        #textGameStart.textGame
+          button#startGame.btnGame(type='button') Start Game  
+        #textGameEnd.textGame
+          button#endGame.btnGame(type='button') Fin de la partie
+          //- #divTextGameEnd.divTextGame
+        .row 
+          div#text
+            p#pRandomColor
+              span#spanRandomText
+        .row
+          div.col-md-3
+              button(id='blueStar', class='button', name='blueStar', type='button')
+                svg(aria-hidden='true', viewbox='0 0 10 10', xmlns='http://www.w3.org/2000/svg')
+                  path(d='M7 9L5 8 3 9V6L1 4h3l1-3 1 3h3L7 6z', style='fill:rgb(0,0,255); stroke:rgb(0,0,0); stroke-width:0.1;')
+                p Étoile Bleu
+          div.col-md-3
+              button(id='yellowSquare', class='button', name='yellowSquare', type='button')
+                svg(width='85', height='85', xmlns='http://www.w3.org/2000/svg')
+                  rect(width='80', height='80', style='fill:rgb(255,255,0);stroke-width:1;stroke:rgb(0,0,5)')
+                p Carré Jaune
+          div.col-md-3
+            button(id='redTriangle', class='button', name='redTriangle', type='button')
+              svg(width='100', height='100', xmlns='http://www.w3.org/2000/svg')
+                polygon(points='40,0 75, 75 0, 75', style='fill:rgb(255,0,0);stroke-width:1;stroke:rgb(0,0,0)')
+              p Triangle Rouge 
+          div.col-md-3 
+            button(id='greenCircle', class='button', name='greenCircle', type='button')
+              svg(width='100', height='100', xmlns='http://www.w3.org/2000/svg')
+                svg(width='100', height='100', xmlns='http://www.w3.org/2000/svg')
+                  circle(cx='50', cy='50', r='35', style='fill:rgb(0,255,0);stroke-width:1;stroke:rgb(0,0,0)')
+              p Cercle Vert
+      
+      .col-md-12.col-lg-3
+        .row
+          h2 JOUEURS&nbsp;:
+            //- span(id=session.nickname)
+            //-   | #{session.nickname}
+            //- span  :  
+            //- span(id="scoreCurrentGame")
+            //-   | #{session.scoreCurrentGame}
+          div
+            ul#sectionDataPlayers
+            //- span#nicknameSectionPlayers
+            //- span  :  
+            //- span#scoreCurrentGameSectionPlayers
+        .row
+          h2 INSTRUCTIONS&nbsp;:
+          p.textLateral Dès qu'un mot apparaît, cliquez sur&nbsp;le&nbsp;bouton qui&nbsp;lui&nbsp;correspond. 
+          p.textLateral Lorsque vous cliquez sur&nbsp;le&nbsp;bon bouton vous gagnez 10&nbsp;points, tandis qu'à&nbsp;l'inverse vous&nbsp;perdez 10&nbsp;points.
+          p.textLateral Attention ne prenez en compte que&nbsp;le&nbsp;sens du&nbsp;mot, il&nbsp;ne&nbsp;faut pas prendre en&nbsp;compte la&nbsp;couleur du&nbsp;fond, ni&nbsp;la&nbsp;couleur de son texte.
+
+        .row
+          h2 MEILLEUR SCORE&nbsp;: 
+            span#score.textLateral 0
+        script(src='./socket.io/socket.io.min.js')
+        script(src='../script/multiplayer.js')
+        
+

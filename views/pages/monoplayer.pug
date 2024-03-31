@@ -1,0 +1,28 @@
+extends ../layouts/layout.pug
+block content
+  .container
+    .row
+      .col-lg-12.col-xl-10
+        #divImgGame
+          img#imgGame(src='../image/Aurore-Sifflet_game.png' alt='Image du jeu' srcset='')
+          #divTextGame.divTextGame
+            button#startGame(type='button') Start Game
+        #divImgGameOver
+          img#imgGame(src='../image/Aurore-Sifflet_game.png' alt='Image du jeu' srcset='')
+          #divTextGameOver.divTextGame
+            button#startGame(location='reload' type='button') Game Over
+        canvas#canvas
+      .col-lg-12.col-xl-2
+        .row
+          h2
+            | SCORE : 
+            span#score.textLateral 0
+        .row
+          h2 INSTRUCTIONS&nbsp;:
+          p.textLateral La capture d&rsquo;un&nbsp;diamant affiche une&nbsp;comp&eacute;tence et&nbsp;vous&nbsp;rapporte des&nbsp;points. Attention&nbsp;dès&nbsp;que le&nbsp;point rouge vous&nbsp;touche la&nbsp;partie est&nbsp;terminée.
+        .row
+          h2 COMP&Eacute;TENCES&nbsp;:
+          p#skills.textLateral
+        script(src='../script/aurore.sifflet_pacman-cv.js')
+        
+

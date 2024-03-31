@@ -1,0 +1,18 @@
+extends ../layouts/layout.pug
+block css
+  link(rel="stylesheet", href="../../style/index.css")
+block content
+  .container
+    .row
+      .col-lg-12.col-xl-1
+      .col-lg-12.col-xl-6
+        p Bienvenue, pour pouvoir participer au jeu multijoueur, vous pouvez vous inscrire puis vous connecter. Le but est lorsqu'un' mot apparaît vous devez cliquer le plus vite possible sur le bouton qui lui est associé. Je vous souhaite de bonnes parties.
+      .col-lg-12.col-xl-2
+        a(href='/inscription')
+          button.buttonPageIndex S'incrire
+      .col-lg-12.col-xl-2
+        a(href='/connexion')
+          button.buttonPageIndex Se connecter
+      .col-lg-12.col-xl-1
+       
+      //- script(src="/script/.js")

@@ -1,0 +1,83 @@
+#gamePlace {
+  margin-top: 20px;
+}
+#text {
+  margin-top: 70px;
+  margin-bottom: 25px;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.button {
+  margin: 5px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+  color: #000000;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  height: 220px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  padding: 0.8rem;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+/* Styles pour le survol */
+.button:hover {
+  opacity: 0.9;
+  background-color: #0b0d0f;
+}
+
+#blueStar {
+  background-color: rgb(42, 81, 255);
+}
+#yellowSquare {
+  background-color: rgb(241, 255, 110);
+}
+#redTriangle {
+  background-color: rgb(231, 72, 99);
+}
+#greenCircle {
+  background-color: rgb(47, 165, 0);
+}
+.col-xl-3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btnGame{
+  opacity: 1;
+  color: white;
+  font-size: 3rem;
+  background-color: #1d1b98;
+  font-family: 'PacmanFont', sans-serif;
+}
+.TextGame {
+  position: absolute;
+  /* top: 23%;
+  left: 26%; */
+  background-color: #1d1b98;
+  opacity: 1;
+  padding: 30px;
+  border-radius: 20px;
+  margin-top: 64px;
+}
+#textGameEnd {
+  display: none;
+  left: 15%;
+}
+#chronometre {
+  text-align: center;
+  font-size: 50px;
+}
+
+
+
+
