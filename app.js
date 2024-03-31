@@ -24,7 +24,6 @@ import { findOneData } from './src/db/findOneData.js'
 
 const app = express();
 const port = String(process.env.PORT);
-const host = String(process.env.HOST);
 const mongoUrl = String(process.env.MONGOURL);
 const dbName = String(process.env.DBNAME);
 const privateKey = String(process.env.PRIVATEKEYJWT);
@@ -172,8 +171,8 @@ app.use((err, req, res, next) => {
   res.status(500).send('Une erreur est survenue');
 });
 
-const httpServer = app.listen(port, host, () => {
-  console.log(`Server started at ${host}:${port}`);
+const httpServer = app.listen(port, () => {
+  console.log(`Server started at ${port}`);
 });
 
 
