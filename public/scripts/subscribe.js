@@ -12,7 +12,7 @@ window.document.addEventListener('DOMContentLoaded', () => {
           const formData = new FormData(myForm);
           const searchParams = new URLSearchParams(formData);
           
-          const response = await fetch(`http://192.168.1.44:80/inscription`, {
+          const response = await fetch(`https://evaluation-projet-back-end.onrender.com/inscription`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/x-www-form-urlencoded'
